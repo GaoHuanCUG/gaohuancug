@@ -239,6 +239,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/10/ParallelComputing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/10/ParallelComputing/" itemprop="url">ParallelComputing</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-10T21:25:01+08:00">
+                2020-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Parallel-Computing"><a href="#Parallel-Computing" class="headerlink" title="Parallel Computing"></a>Parallel Computing</h1><p>As discribed in wikipedia, the Parallel Computing is:</p>
+<blockquote>
+<p>Parallel computing is a type of computation in which many calculations or the execution of processes are carried out simultaneously.<br><a href="https://en.wikipedia.org/wiki/Parallel_computing" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Parallel_computing</a></p>
+</blockquote>
+<p>In sequential program, the computation task is carried out orderly. Let’s assume that there are 4 tasks (A, B, C, D) to be carried out, the sequential program will handle task A first. When task A is finished, task B will be handled, …If the running time of these four tasks are eaqual (let’s assume it’s 1 second), the total time will be 4 s.  </p>
+<p>Varied from the sequential program, the parallel program will handle many tasks simultaneously. For example, it may handle task A, B, C, and D at the same time. The total time is 1s. If the computer can handle two tasks simultaneously, the program will spend 2 s handling all tasks, including 1s for A and B, 1s for C and D (maybe other combinations).  </p>
+<p>But how to handle two computing tasks simultaneously? There are two main points. First, these four tasks should be able to be divided. If task B relies on the result of task A, you cannot separate and carry out them simultaneously. Task B must wait for the result of task A before being carried out. Second, the computer must be able to handle many tasks simultaneously. Generally, each “core” can handle one computing task, thus parallel computing requires multi-core processing unit, such as the multi-core CPU or GPU. Many “cores” look like many workers in the industry. One worker can only handle one task, to accelerate the speed of production, we can add the number of workers to improve the number of tasks that can be handled simultaneously. For example, if the client requires 100 products and one worker can produce 1 product in one hour, we need 100 hours (approximately 4 days) if we have only one worker. However, if we have 100 workers, it only cost us 1 hour to produce such products.  </p>
+<p>Raster data is a kind of data that contains plenty of rasters. Generally, one raster computing algorithm requires the target raster’s own data and maybe its neighboring raster’s original data, while different raster’s calculating result is not associated with other rasters’ results. What’s more, the number of rasters in the raster data is often pretty big. Considering factors mentioned above, it’s flexible and convenient for raster algorithms to speed up using parallel computing.  </p>
+<p>The Graphic Processing Unit (GPU) is a special processing unit for general processing tasks. In the beginning, GPU was used to processing images only, while the development of  hardware frameworks of GPU and the unified conputing architectures make it possible to handle complex computing tasks beyond image processing.</p>
+<p>Our tasks are to developing effective raster computing algorithms by a GPU-based parallel computing framework named the CUDA (Compute Unified Device Architecture).</p>
+<p>I will introduce CUDA in my next blog.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/07/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -530,7 +660,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
